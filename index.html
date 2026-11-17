@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vitaly Chile | Demo de portada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#12382c;--cream:#f0ede8;--paper:#faf8f4;--line:#deded6;color:#191c1a;font-family:Inter,Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0}button,a{font:inherit}button{cursor:pointer}a{color:inherit}img{display:block;width:100%}
+.promo,.strip{background:var(--forest);color:white;text-align:center;padding:12px 16px;font-size:12px;font-weight:800;letter-spacing:.07em}
+.promo a{padding-left:12px}.promo time{padding-left:12px;font-variant-numeric:tabular-nums}.nav,.wrap{max-width:1200px;margin:auto;padding-inline:24px}
+.nav{height:64px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}.nav>a:first-child{justify-self:start}.nav button{justify-self:end}.logo{font-size:29px;font-weight:900;letter-spacing:-.07em;text-decoration:none;color:var(--forest)}
+.plain{background:white;border:1px solid var(--line);border-radius:8px;padding:8px 12px}.hero{background:var(--cream) url('https://vitaly-chile.com/cdn/shop/files/Frame_5.webp?v=1775058862') center/cover}
+.hero .wrap{min-height:470px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:24px;padding-block:40px;text-align:center}
+.hero img{max-height:450px;object-fit:contain}.hero h1{font-size:clamp(43px,6vw,82px);letter-spacing:-.085em;line-height:.95;margin:0 0 13px;font-weight:900}.hero h2{font:italic clamp(26px,4vw,46px)/1.04 Georgia,serif;margin:22px 0 10px}
+.pill,.btn{display:inline-block;border-radius:6px;background:var(--forest);color:white;text-decoration:none;font-weight:800;padding:12px 16px;border:1px solid var(--forest)}.pill{background:#222;border-color:#222}.btn.light{color:var(--forest);background:#fff}.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center;padding-block:26px}.benefits span{display:block;margin-top:6px;font-size:13px;color:#555}
+.section{padding-block:56px}.center{text-align:center}.section h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.05em;line-height:1.06;margin:0 0 18px}.cream{background:var(--paper)}
+.two,.products{display:grid;gap:16px}.two{grid-template-columns:1fr 1fr}.pane{border:1px solid var(--line);padding:24px;border-radius:14px;background:white}
+.products{margin-top:28px}.product{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding:24px;border:1px solid var(--line);border-radius:18px;scroll-margin-top:18px}.product img{aspect-ratio:4/3;object-fit:contain;background:var(--paper);border-radius:12px}.product h3{font-size:clamp(26px,4vw,40px);line-height:1.1;margin:8px 0}.price{font-size:24px;font-weight:800}
+.guarantee,footer{background:var(--forest);color:white}.faq{max-width:800px}.faq details{padding:16px 0;border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:700}footer{padding-block:24px}
+dialog{position:fixed;inset:0 0 0 auto;margin:0;width:min(440px,100%);max-width:none;height:100%;max-height:none;border:0;padding:24px}dialog::backdrop{background:#0007}.cart-head,.cart-line{display:flex;align-items:center;justify-content:space-between;gap:10px}.cart-line{padding:14px 0;border-bottom:1px solid var(--line)}.qty{white-space:nowrap}.qty button{padding:5px 9px}.cart-bottom{margin-top:24px}
+@media(max-width:690px){.hero .wrap,.product{grid-template-columns:1fr;gap:16px}.hero .wrap{padding-block:26px}.hero img{max-height:280px}.benefits{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.section{padding-block:36px}.product{padding:14px}.wrap{padding-inline:16px}.promo a,.promo time{padding-left:6px}}
+</style>
+</head>
+<body>
+<header>
+<div class="promo">HASTA 60% OFF · LLEVA 2 PAGA 1 <time id="countdown" aria-label="Cuenta regresiva de demostración"></time> <a href="#productos">Comprar ahora</a></div>
+<nav class="nav" aria-label="Principal"><a href="#productos">Catálogo</a><a href="#" class="logo">Vitaly®</a><button id="open-cart" class="plain">Carrito <span id="count">0</span></button></nav>
+</header>
+<main>
+<section class="hero">
+<div class="wrap"><div><h1>LLEVA 2 PAGA 1</h1><span class="pill">HASTA 60% OFF</span><h2>Tu rutina de bienestar, en gotas</h2><p>Explora las fórmulas y el pack Vitaly.</p><div class="actions"><a class="btn" href="#drenaje">Drenaje linfático</a><a class="btn light" href="#clorofila">Clorofila</a></div></div>
+<img src="https://vitaly-chile.com/cdn/shop/files/img-hero.webp?v=1775057730" alt="Presentación de los productos Vitaly" fetchpriority="high"></div>
+</section>
+<div class="strip">ENVÍO A TODO CHILE · GARANTÍA DE 45 DÍAS · INGREDIENTES DE ORIGEN NATURAL</div>
+<div class="wrap benefits"><div><strong>Envío gratis</strong><span>A todo Chile</span></div><div><strong>45 días</strong><span>Garantía de la tienda</span></div><div><strong>Origen natural</strong><span>Ingredientes seleccionados</span></div><div><strong>Hasta 6 cuotas</strong><span>Sin interés</span></div></div>
+<section class="cream"><div class="section wrap center"><h2>Dos fórmulas para tu rutina</h2><div class="two"><article class="pane"><h3>Fórmula de drenaje</h3><a href="#drenaje">Ver gotas de drenaje</a></article><article class="pane"><h3>Fórmula de clorofila</h3><a href="#clorofila">Ver gotas de clorofila</a></article></div></div></section>
+<section class="section wrap" id="productos"><h2 class="center">Productos destacados</h2><div class="products" id="catalog"></div></section>
+<section class="cream"><div class="section wrap center"><h2>Opiniones de clientes</h2><a href="https://vitaly-chile.com/">Ver reseñas en la tienda original</a></div></section>
+<section class="guarantee"><div class="section wrap center"><p>GARANTÍA DE LA TIENDA</p><h2>45 días</h2><a href="https://vitaly-chile.com/policies/refund-policy">Consultar condiciones</a></div></section>
+<section class="section wrap faq"><h2>Preguntas frecuentes</h2><details><summary>¿Cuáles son los productos disponibles?</summary><p>El catálogo de referencia incluye gotas de drenaje, gotas de clorofila y un pack con ambas fórmulas.</p></details><details><summary>¿Puedo comprar desde esta página?</summary><p>Esta es una demo. Puedes probar el carrito y abrir la tienda original para consultar stock y comprar.</p></details><details><summary>¿Dónde reviso el envío y la garantía?</summary><p>Consulta las condiciones vigentes en la tienda original antes de realizar tu compra.</p></details></section>
+</main>
+<footer><div class="wrap">Vitaly Chile · Demostración de portada</div></footer>
+<dialog id="cart" aria-labelledby="cart-title"><div class="cart-head"><h2 id="cart-title">Tu carrito</h2><form method="dialog"><button class="plain" aria-label="Cerrar carrito">✕</button></form></div><div id="cart-lines" aria-live="polite"></div><div class="cart-bottom"><strong id="total"></strong><p><a class="btn" href="https://vitaly-chile.com/">Ir a la tienda original</a></p></div></dialog>
+<script>
+const source = 'https://vitaly-chile.com';
+const products = [
+  {id:'drenaje', name:'Gotas Vitaly® · Drenaje linfático', price:34990, image:source+'/cdn/shop/files/linfatica_530x.webp?v=1794509885'},
+  {id:'pack', name:'Pack Reset Vitaly®', price:32990, image:source+'/cdn/shop/files/10_fac6504f-a68a-49eb-adf5-ae21bbdca8c0_530x.webp?v=1779688627'},
+  {id:'clorofila', name:'Gotas de Clorofila Vitaly®', price:34990, image:source+'/cdn/shop/files/img-hero.webp?v=1775057730'},
+];
+const format = new Intl.NumberFormat('es-CL', {style:'currency', currency:'CLP'});
+const cart = document.querySelector('#cart');
+const quantities = new Map();
+function renderCart(){
+  let total = 0;
+  let count = 0;
+  const content = products.flatMap(product => {
+    const quantity = quantities.get(product.id) || 0;
+    if (!quantity) return [];
+    total += quantity * product.price;
+    count += quantity;
+    return [`<div class="cart-line"><span>${product.name}<br>${format.format(product.price * quantity)}</span><span class="qty"><button class="plain" data-id="${product.id}" data-change="-1" aria-label="Quitar una unidad">−</button> ${quantity} <button class="plain" data-id="${product.id}" data-change="1" aria-label="Sumar una unidad">+</button></span></div>`];
+  });
+  document.querySelector('#cart-lines').innerHTML = content.join('') || '<p>Tu carrito está vacío.</p>';
+  document.querySelector('#count').textContent = count;
+  document.querySelector('#total').textContent = 'Total ' + format.format(total);
+}
+document.querySelector('#catalog').innerHTML = products.map(product => `<article id="${product.id}" class="product"><img src="${product.image}" alt="${product.name}" loading="lazy"><div><h3>${product.name}</h3><p class="price">${format.format(product.price)}</p><button class="btn" data-id="${product.id}" data-change="1">Agregar al carrito</button></div></article>`).join('');
+document.querySelector('#open-cart').addEventListener('click', () => cart.showModal());
+document.addEventListener('click', event => {
+  const button = event.target.closest('button[data-id]');
+  if (!button) return;
+  const {id, change} = button.dataset;
+  quantities.set(id, Math.max(0, (quantities.get(id) || 0) + Number(change)));
+  renderCart();
+  if (!cart.open) cart.showModal();
+});
+renderCart();
+const deadline = Date.now() + 24 * 60 * 60 * 1000;
+function tick(){
+  const remaining = Math.max(0, Math.floor((deadline - Date.now()) / 1000));
+  document.querySelector('#countdown').textContent = [Math.floor(remaining/3600),Math.floor(remaining/60)%60,remaining%60].map(part => String(part).padStart(2,'0')).join(':');
+}
+tick();
+setInterval(tick, 1000);
+</script>
+</body>
+</html>
